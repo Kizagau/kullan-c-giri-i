@@ -1,0 +1,66 @@
+import java.util.Scanner;
+
+public class kllnci {
+    public static void main(String[] args) {
+        String userName, password;
+
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Kullanıcı Adınız :");
+        userName = inp.nextLine();
+
+        if (userName.equals("Mustafa")) {
+            System.out.print("Şifrenizi Giriniz :");
+            password = inp.nextLine();
+
+            if (password.equals("galata34")) {
+                System.out.print("Giriş yapıldı");
+            }else {
+                System.out.println("Yanlış Şifre. Değiştirmek İster Misiniz?");
+                 int evet = 1 , hayır = 2, secim;
+                 System.out.println(" 1-Evet \n 2-Hayır");
+                 System.out.print("Seçimiz:");
+                 secim = inp.nextInt();
+
+
+
+                 if (secim == evet ) {
+                     String yenisifre;
+                     Scanner girdi = new Scanner(System.in);
+                     System.out.print("Yeni şifrenizi giriniz:");
+                     yenisifre = girdi.nextLine();
+
+                     if(yenisifre.equals("galata34")) {
+                         System.out.print("Şifre eski şifreyle aynı olamaz!");
+                     }else {
+                         System.out.print("Yeni şifreniz başarıyla oluşturuldu.");
+                     }
+
+
+
+
+                 }else if(secim == hayır) {
+                     System.out.print("Giriş başarısız.");
+                 }
+
+
+
+
+
+            }
+
+
+
+
+        }else {
+            System.out.println("Tekrar Deneyiniz");
+        }
+
+
+
+
+
+        }
+
+
+        }
